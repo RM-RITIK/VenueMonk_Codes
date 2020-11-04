@@ -18,14 +18,14 @@ unsigned int getWeekday(unsigned long long year, unsigned int month, unsigned in
 
 int main()
 {
-  unsigned int tests;
-  cin >> tests;
-  while (tests--)
-  {
     unsigned long long year1, year2;
     unsigned int month1, month2, day1, day2;
-    cin >> year1 >> month1 >> day1;
-    cin >> year2 >> month2 >> day2;
+    year1 = 1901;
+    year2 = 2000;
+    month1 = 1;
+    month2 = 12;
+    day1 = 1;
+    day2 = 31;
     if (year2 < year1 || (year2 == year1 && month2 < month1))
     {
       swap(year1,  year2);
@@ -49,7 +49,7 @@ int main()
     while (currentYear + 2800 < year2)
     {
       currentYear += 2800;
-      sum += 4816;
+      sum += 4816;         
     }
     while (currentMonth < month2 || currentYear < year2)
     {
@@ -68,6 +68,6 @@ int main()
       sum++;
 
     cout << sum << endl;
-  }
   return 0;
 }
+
